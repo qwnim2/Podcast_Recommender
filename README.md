@@ -8,7 +8,8 @@ Recommend similar podcast shows to the current one.
 ```
 python3 preprocessing.py
 ```
-**or Download the pickle file on the GD for getting the similarity table**
+**or**
+**Download the pickle file on the GD for getting the similarity table**
 ```
 bash Download.sh
 ```
