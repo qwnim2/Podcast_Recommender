@@ -10,9 +10,8 @@ Recommend similar podcast shows to the current one.
 ---
 
 ### Result
-**Run the command **
+**Run the command**
 ```
 python3 main.py
 ```
-**Simply check it on the browser, it's on 127.0.0.1:5000
-```
+**Simply check it on the browser, it's on 127.0.0.1:5000**
