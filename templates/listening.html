@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Podcast Recommender (TF-IDF)</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <link href="static/vendor/owl.carousel/static/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyPortfolio - v3.0.0
+  * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body style="background :rgba(229,229,182,0.3)">
+
+  <!-- ======= Navbar ======= -->
+  <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
+    <div class="container py-2 py-md-5">
+      <div class="row align-items-start">
+        <div class="col-md-2">
+          <ul class="custom-menu">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="works.html">Works</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 d-none d-md-block  mr-auto">
+          <div class="tweet d-flex">
+            <span class="icofont-twitter text-white mt-2 mr-3"></span>
+            <div>
+              <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore. <br> <a href="#">t.co/v82jsk</a></em></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-none d-md-block">
+          <h3>Hire Me</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiisexplicabo inventore. <br> <a href="#">myemail@gmail.com</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="/">Podcast Life. (TF-IDF)</a>
+
+      <a href="#" class="burger" data-bs-toggle="collapse" data-bs-target="#main-navbar">
+        <span></span>
+      </a>
+
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ======= Works Section ======= -->
+    <section class="section site-portfolio">
+      <div class="container">
+        <div class="row mb-5 align-items-center">
+            <h2 class="mb-4">You are now listening...</h2>
+            <div class=" d-flex align-items-stretch">
+                <div class="col-md-12 col-lg-6 mb-4 mb-lg-0 d-flex flex-column justify-content-between" data-aos="fade-up">
+                    <h1 class="mb-0"> {{ podcast_name }}</h1>
+                    <h3 class="mb-0"> {{podcaster}}</h3>
+                    <h5 class="mb-0 pl-1"> {{discription}}</h5>
+                    <img class="img-fluid" src="https://developers.google.com/cast/images/video_no_seek_layout.png">
+                </div> 
+                <div class="col-md-12 col-lg-6 text-start text-lg-end align-self-center" data-aos="fade-up" data-aos-delay="100">
+                    <img class="img-fluid" src={{png}}>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mb-4">適合您的節目：</h2>
+        <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
+            
+            <div class="item web col-sm-6 col-md-4 col-lg-4 mb-4">
+                <button name="forwardBtn" type="submit">
+                <!-- <button name="forwardBtn" type="submit">Forward</button>  -->
+                <a href="/test?prev={{ prev }}&cadidate={{ six_candidate[0] }}" class="item-wrap fancybox" >
+                <div class="work-info">
+                    <h3>{{ top_six[0] }}</h3>
+                    <!-- <form action="/test" method="post"> 
+                        <button name="forwardBtn" type="submit">Forward</button> 
+                    </form>  -->
+                    <span>{{ top_six_publisher[0] }}</span>
+                </div>
+                <img class="img-fluid" src={{img[0]}}>
+                </a>
+                </button>
+            </div>
+          
+            <div class="item web col-sm-6 col-md-4 col-lg-4 mb-4">
+                <button name="forwardBtn" type="submit">
+                <!-- <button name="forwardBtn" type="submit">Forward</button>  -->
+                <a href="/test?prev={{ prev }}&cadidate={{ six_candidate[1] }}" class="item-wrap fancybox" >
+                <div class="work-info">
+                    <h3>{{ top_six[1] }}</h3>
+                    <!-- <form action="/test" method="post"> 
+                        <button name="forwardBtn" type="submit">Forward</button> 
+                    </form>  -->
+                    <span>{{ top_six_publisher[1] }}</span>
+                </div>
+                <img class="img-fluid" src={{img[1]}}>
+                </a>
+                </button>
+            </div>
+
+            <div class="item web col-sm-6 col-md-4 col-lg-4 mb-4">
+                <button name="forwardBtn" type="submit">
+                <!-- <button name="forwardBtn" type="submit">Forward</button>  -->
+                <a href="/test?prev={{ prev }}&cadidate={{ six_candidate[2] }}" class="item-wrap fancybox" >
+                <div class="work-info">
+                    <h3>{{ top_six[2] }}</h3>
+                    <!-- <form action="/test" method="post"> 
+                        <button name="forwardBtn" type="submit">Forward</button> 
+                    </form>  -->
+                    <span>{{ top_six_publisher[2] }}</span>
+                </div>
+                <img class="img-fluid" src={{img[2]}}>
+                </a>
+                </button>
+            </div>
+
+            <div class="item web col-sm-6 col-md-4 col-lg-4 mb-4">
+                <button name="forwardBtn" type="submit">
+                <!-- <button name="forwardBtn" type="submit">Forward</button>  -->
+                <a href="/test?prev={{ prev }}&cadidate={{ six_candidate[3] }}" class="item-wrap fancybox" >
+                <div class="work-info">
+                    <h3>{{ top_six[3] }}</h3>
+                    <!-- <form action="/test" method="post"> 
+                        <button name="forwardBtn" type="submit">Forward</button> 
+                    </form>  -->
+                    <span>{{ top_six_publisher[3] }}</span>
+                </div>
+                <img class="img-fluid" src={{img[3]}}>
+                </a>
+                </button>
+            </div>
+
+            <div class="item web col-sm-6 col-md-4 col-lg-4 mb-4">
+                <button name="forwardBtn" type="submit">
+                <!-- <button name="forwardBtn" type="submit">Forward</button>  -->
+                <a href="/test?prev={{ prev }}&cadidate={{ six_candidate[4] }}" class="item-wrap fancybox" >
+                <div class="work-info">
+                    <h3>{{ top_six[4] }}</h3>
+                    <!-- <form action="/test" method="post"> 
+                        <button name="forwardBtn" type="submit">Forward</button> 
+                    </form>  -->
+                    <span>{{ top_six_publisher[4] }}</span>
+                </div>
+                <img class="img-fluid" src={{img[4]}}>
+                </a>
+                </button>
+            </div>
+            
+            <div class="item web col-sm-6 col-md-4 col-lg-4 mb-4">
+                <button name="forwardBtn" type="submit">
+                <!-- <button name="forwardBtn" type="submit">Forward</button>  -->
+                <a href="/test?prev={{ prev }}&cadidate={{ six_candidate[5] }}" class="item-wrap fancybox" >
+                <div class="work-info">
+                    <h3>{{ top_six[5] }}</h3>
+                    <!-- <form action="/test" method="post"> 
+                        <button name="forwardBtn" type="submit">Forward</button> 
+                    </form>  -->
+                    <span>{{ top_six_publisher[5] }}</span>
+                </div>
+                <img class="img-fluid" src={{img[5]}}>
+                </a>
+                </button>
+            </div>
+
+        </div>
+      </div>
+    </section><!-- End  Works Section -->
+
+    
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="mb-1">&copy; Copyright MyPortfolio. All Rights Reserved</p>
+          <div class="credits">
+            <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=MyPortfolio
+          -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+        <div class="col-sm-6 social text-md-end">
+          <a href="#"><span class="icofont-twitter"></span></a>
+          <a href="#"><span class="icofont-facebook"></span></a>
+          <a href="#"><span class="icofont-dribbble"></span></a>
+          <a href="#"><span class="icofont-behance"></span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+
+</body>
+
+</html>
