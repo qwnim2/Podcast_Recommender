@@ -4,8 +4,14 @@ Recommend similar podcast shows to the current one.
 ## Usage
 
 ### Preprocessing
-**Run the preprocessing.py or Download the pickle file on the GD**
-**for getting the similarity table**
+**Run the preprocessing.py**
+```
+python3 preprocessing.py
+```
+**or Download the pickle file on the GD for getting the similarity table**
+```
+bash Download.sh
+```
 ** Each similarity pickle file gets 1.4GB **
 ---
 
