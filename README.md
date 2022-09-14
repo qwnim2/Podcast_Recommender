@@ -33,5 +33,5 @@ python3 main.py
 ## The recommend podcast show corresponding to the current one.
 ![img3](https://github.com/qwnim2/Podcast-Recommender/blob/master/demo%20img/%E6%88%AA%E5%9C%96%202021-01-20%20%E4%B8%8A%E5%8D%884.35.41.png)
 ---
-## You can change to Bert embedding and smell the difference
+## You can change to Bert embedding and find the difference
 ![img4](https://github.com/qwnim2/Podcast-Recommender/blob/master/demo%20img/%E6%88%AA%E5%9C%96%202021-01-20%20%E4%B8%8A%E5%8D%884.36.22.png)
